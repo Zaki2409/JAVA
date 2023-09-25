@@ -21,7 +21,7 @@ class Pen {
 class Student{
 
     String name;
-    int age;
+    int age;        
     
     public void stdinfo() {
         System.out.println(this.name);
@@ -68,7 +68,62 @@ class Studenttt{
     }
 }
 
+class Polyl{
+    // this is func over loading 
+    String name;
+    int age;
+    String sub;
+    // now i have to create func with same name but diff code...differ should be either in num of args or return type or arg type
 
+    public void printinfo(String name) {
+        System.out.println(name);
+    }
+    public void printinfo(String sub , int age){
+        System.out.println(sub+ " " + age);
+
+    }
+    public void printinfo(int age){
+        System.out.println(age);
+    }
+
+}
+
+ // Inheritance 
+ 
+  class Shape {
+    public void area() {
+    System.out.println("area");
+  }
+}
+
+// 1 lvl (single inherit)
+ class Triangle extends Shape {
+    public void area(int l , int h) {
+        System.out.println(0.5*l*h);
+    }
+ }
+ // 2 lvl ( multi inherit)
+ class Eqitria extends Triangle {
+    public void area(int l , int h) {
+        System.out.println(0.5*l*h);
+    }
+ }
+// heirachi  inherti  (using same parent calss)
+class Cirlce extends Shape {
+    public void area(int r) {
+        System.out.println((3.14)*r*r);
+    }
+}
+
+
+
+
+
+///////////////////////////////
+///////////////////////////////
+///////////////////////////////   MAIN CLASS 
+///////////////////////////////
+///////////////////////////////
 
 public class OPPS {
     
@@ -105,9 +160,17 @@ public class OPPS {
         s4.stfinfo3();
 
 
+       //Polymorphism (func overloading)
+       Polyl pl1 = new Polyl();
+       pl1.name="zaki";
+       pl1.age=12;
+       pl1.sub="java";
+       pl1.printinfo(pl1.sub , pl1.age );
 
-
-
+      // inheritanfe lvl 1 
+      Triangle t1 = new Triangle();
+      t1.area();
+      t1.area(4, 2);
 
 
 
@@ -116,18 +179,6 @@ public class OPPS {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  }
+
+
