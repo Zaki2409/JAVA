@@ -1,9 +1,10 @@
 package OOPS;
+//import BANK.Bank;
 
 
 class Pen {
 
-    String color;
+    String color; 
     String type;
 
 
@@ -115,8 +116,78 @@ class Cirlce extends Shape {
     }
 }
 
+// Acesse modifiers 
+
+class Bank  {
+     String name; //default 
+     public String eamil; // public
+     protected String Acctype; // protected
+     private String pass; // praivet only acessed they getter and setter function
+
+     
+         //getter funcion
+         public String getPass() {
+            return this.pass;
+         }
+         // setter function
+         public void setpass(String pass) {
+            this.pass=pass;
+         }
 
 
+}
+
+// Abstract 
+
+abstract class Animal{
+    abstract void walk();
+    Animal() {
+        System.out.println("you are creating an animal");
+    }
+    public void eat() {
+   System.out.println("eatss");
+    }
+   
+}
+ 
+class Horse extends Animal {
+
+    Horse () {
+        System.out.println("you have created a horse");
+    }
+    public void walk() {
+        System.out.println("walks on 4");
+    }
+}
+
+class Chiken extends Animal {
+    public void walk() {
+        System.out.println("walks on 2");
+    }
+}
+
+// interface and multiple inhertiance
+interface Animals {
+    void walks();           // here only  define and not implement code
+}
+interface Herbivore{
+    void eatgrass();          // function is just deined , need to implement somewhere
+}
+                                     
+class Dog implements Animals , Herbivore { //  multiple inhertiance
+    public void walks() {
+        System.out.println("dog walks on 4 legs");
+    }
+    public void eatgrass() {
+        System.out.println("this is herbocorere");
+    }
+}
+
+
+
+
+ 
+    
 
 
 ///////////////////////////////
@@ -171,12 +242,31 @@ public class OPPS {
       Triangle t1 = new Triangle();
       t1.area();
       t1.area(4, 2);
-
-
-
+ 
+     // pacakge (bank)
+     //BANK.Bank a1 = new BANK.Bank();
+     
+     
+       Bank b1 = new Bank();
+       b1.name= "punjabbank";
+       b1.eamil="mzk";
+       b1.Acctype="debit";
+       b1.setpass("this is Password");
+       System.out.println(b1.getPass());
+    //Abstraction
+    Horse h1 = new Horse();
+    h1.walk();
+    h1.eat();
+    //Animal a1 = new Animal();   un comment this to see thhe error
+    
+    // interfaces
+     Dog  d1 = new Dog();
+     d1.walks();
+     d1.eatgrass(); // multiple inhertance
 
     }
 
+  
 
 
  }
