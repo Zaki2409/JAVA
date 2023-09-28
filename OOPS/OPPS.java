@@ -145,7 +145,7 @@ abstract class Animal{
         System.out.println("you are creating an animal");
     }
     public void eat() {
-   System.out.println("eatss");
+   System.out.println("Animal Eat");
     }
    
 }
@@ -158,6 +158,9 @@ class Horse extends Animal {
     public void walk() {
         System.out.println("walks on 4");
     }
+    public void eat() {
+        System.out.println("Horse Eat");
+         }
 }
 
 class Chiken extends Animal {
@@ -256,7 +259,7 @@ public class OPPS {
     //Abstraction
     Horse h1 = new Horse();
     h1.walk();
-    h1.eat();
+        
     //Animal a1 = new Animal();   un comment this to see thhe error
     
     // interfaces
