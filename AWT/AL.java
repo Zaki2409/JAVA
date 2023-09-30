@@ -68,10 +68,10 @@ public class AL extends Frame implements ActionListener,TextListener {
                 //t1.setText(e.getActionCommand());    
         }
 
-        public void windowClosing(WindowEvent e) {
-                dispose();
-                System.exit(0);
-        }
+        // public void windowClosing(WindowEvent e) {
+        //         dispose();
+        //         System.exit(0);
+        // }
 
 
         public void textValueChanged(TextEvent e) {
